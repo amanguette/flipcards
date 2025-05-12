@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "allowJs": true
+  },
+  "include": ["src", "vite.config.ts"],
+  "exclude": ["../eslint.base.mjs", "eslint.config.mjs"]
+}

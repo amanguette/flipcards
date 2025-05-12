@@ -1,0 +1,12 @@
+// Mixin pour les media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+
+.env
+
+.vscode/
+.DS_Store
+
+*.log
+npm-debug.log*
+
+*.pid
+*.seed
+*.tmp

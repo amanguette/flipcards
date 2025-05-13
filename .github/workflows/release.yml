@@ -23,4 +23,4 @@ jobs:
 
       - run: pnpm exec semantic-release
         env:
-          GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

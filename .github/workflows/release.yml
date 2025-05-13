@@ -10,20 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      # Étape 1 : Installation de pnpm
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: true # installe les dépendances via pnpm install
-
-      # Étape 2 : Configuration de Node
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm' # optionnel mais recommandé
-
-      # Étape 3 : Exécution de semantic-release
+          cache: 'pnpm'
+      - run: pnpm install
       - run: pnpm exec semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+          GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}

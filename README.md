@@ -7,8 +7,8 @@ Ce projet fullstack est conçu dans un objectif d’apprentissage.
 ## 🚀 Objectifs
 
 - Publier un projet personnel structuré, maintenable et facilement déployable
-- Exploiter un stack complet (Frontend, Backend, Base de données)
-- Mettre en œuvre de bonnes pratiques de développement
+- Exploiter un stack complet (Frontend, Backend, Base de données, CI/CD)
+- Mettre en œuvre de bonnes pratiques de développement, en mettant l'accent sur l'automatisation
 
 ## 🧩 Structure du projet
 

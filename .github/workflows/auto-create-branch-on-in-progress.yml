@@ -1,0 +1,60 @@
+name: Create branch when issue moves to In Progress
+
+on:
+  issues:
+    types: [edited, labeled]
+
+jobs:
+  create_branch:
+    if: github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if status changed to 'in progress'
+        id: check_status
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const title = issue.title;
+            const number = issue.number;
+
+            // Check if the issue was labeled as 'in progress'
+            const label = context.payload.label?.name?.toLowerCase();
+            if (label !== 'in progress') {
+              core.setOutput('should_create', 'false');
+              return;
+            }
+
+            const slugify = str =>
+              str.toLowerCase()
+                 .replace(/[^\w\s-]/g, '')
+                 .trim()
+                 .replace(/\s+/g, '-');
+
+            const branchName = `feat/#${number}/${slugify(title)}`;
+            core.setOutput('should_create', 'true');
+            core.setOutput('branch_name', branchName);
+
+      - name: Create branch
+        if: steps.check_status.outputs.should_create == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const branchName = '${{ steps.check_status.outputs.branch_name }}';
+            const default_branch = context.payload.repository.default_branch;
+
+            const { data: refData } = await github.rest.git.getRef({
+              ...context.repo,
+              ref: `heads/${default_branch}`,
+            });
+
+            await github.rest.git.createRef({
+              ...context.repo,
+              ref: `refs/heads/${branchName}`,
+              sha: refData.object.sha,
+            });
+
+            console.log(`✅ Created branch ${branchName}`);

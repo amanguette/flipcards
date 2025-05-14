@@ -1,0 +1,39 @@
+name: Mark linked issue as "in review" when PR is opened
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  label_linked_issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Détecter le numéro de l'issue depuis la PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const prBody = pr.body || "";
+            const branch = pr.head.ref;
+
+            // Essaye de trouver un numéro d'issue dans le corps ou le nom de branche
+            const issueNumberMatch =
+              prBody.match(/#(\d+)/) || branch.match(/#(\d+)/);
+
+            if (!issueNumberMatch) {
+              console.log("❌ Aucun numéro d'issue détecté.");
+              return;
+            }
+
+            const issue_number = Number(issueNumberMatch[1]);
+
+            // Applique le label "in review" à l'issue
+            await github.rest.issues.addLabels({
+              ...context.repo,
+              issue_number,
+              labels: ["in review"]
+            });
+
+            console.log(`✅ Label "in review" ajouté à l'issue #${issue_number}`);

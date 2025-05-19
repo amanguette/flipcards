@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/amanguette/flipcards/compare/v1.0.0...v1.1.0) (2025-05-14)
+
+
+### Features
+
+* **workflows:** ajout des automatisations GitHub Actions + documentation ([1ac0fd0](https://github.com/amanguette/flipcards/commit/1ac0fd01987f36f16b9bbc6bd46bca460b5eb62d))
+
 # 1.0.0 (2025-05-13)
 
 

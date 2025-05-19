@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/amanguette/flipcards/compare/v1.3.0...v1.4.0) (2025-05-19)
+
+
+### Features
+
+* **github config:** update user_story.md to support a possible internationalization, add types ([3980028](https://github.com/amanguette/flipcards/commit/39800284b092c4a5b33bd16f40544e3c3175a65a))
+
 # [1.3.0](https://github.com/amanguette/flipcards/compare/v1.2.0...v1.3.0) (2025-05-19)
 
 

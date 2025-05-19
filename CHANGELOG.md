@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/amanguette/flipcards/compare/v1.4.1...v1.4.2) (2025-05-19)
+
+
+### Bug Fixes
+
+* **github config:** fix user_story.yml code format ([0c820ba](https://github.com/amanguette/flipcards/commit/0c820ba20947a8f69c2a9be4b6bf74cfaaafe157))
+
 ## [1.4.1](https://github.com/amanguette/flipcards/compare/v1.4.0...v1.4.1) (2025-05-19)
 
 

@@ -203,12 +203,18 @@ pnpm test        # Tests unitaires
 
 ---
 
-## 🔁 Automatisations GitHub (Workflows)
+## ⚙️ Automatisations GitHub (Workflows)
 
-Le projet utilise plusieurs workflows GitHub Actions pour automatiser la gestion des User Stories (US) : création de branches, ouverture de Pull Requests, mise à jour automatique des statuts, etc.
-Ces automatisations facilitent le suivi des tâches et réduisent les actions manuelles pendant le cycle de développement.
+Ce projet intègre des **workflows GitHub Actions** pour automatiser plusieurs étapes du cycle de développement :
 
-👉 Pour un aperçu détaillé du fonctionnement et de chaque étape, consulte le fichier .github/workflows/workflows-guide.md
+- Création de branches à partir des User Stories (US)
+- Ouverture automatique de Pull Requests
+- Mise à jour des statuts dans GitHub Project
+- Gestion des labels et synchronisation avec les champs personnalisés
+
+Ces automatisations assurent un suivi rigoureux tout en limitant les tâches manuelles.
+
+📄 Un guide complet décrivant ces automatisations est disponible dans [`workflows-guide.md`](.github/workflows/workflows-guide.md).
 
 ---
 

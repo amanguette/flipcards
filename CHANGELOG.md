@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/amanguette/flipcards/compare/v1.4.0...v1.4.1) (2025-05-19)
+
+
+### Bug Fixes
+
+* **github config:** update user_story.md to user_story.yml for github to recognize the new template ([9a05469](https://github.com/amanguette/flipcards/commit/9a05469508433b8b05c29ffc88bbd4e6c30fde28))
+
 # [1.4.0](https://github.com/amanguette/flipcards/compare/v1.3.0...v1.4.0) (2025-05-19)
 
 

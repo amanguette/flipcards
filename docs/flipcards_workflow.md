@@ -50,7 +50,7 @@ Mettre en place un système de gestion de projet fluide, automatisé et traçabl
 
 - **Nom de branche conventionnel** : `feat/#<id>/<slug-titre>`
 - **Overtime** : Si `Time Spent > Estimation`, un label `overtime` est ajouté automatiquement.
-- **Labels possibles** : `front`, `back`, `db`, `conf`, `ci/cd`, `blocked`
+- **Labels possibles** : `UI design`, `frontend`, `backend`, `db`, `conf`, `ci/cd`, `blocked`
 - **Sprints filtrables** : Visualisation des issues par sprint via le champ `Sprint`
 - **Pas de blocage** si estimation absente, mais une alerte visuelle possible.
 
@@ -62,6 +62,20 @@ Le projet utilise plusieurs workflows GitHub Actions pour automatiser la gestion
 Ces automatisations facilitent le suivi des tâches et réduisent les actions manuelles pendant le cycle de développement.
 
 👉 Pour un aperçu détaillé du fonctionnement et de chaque étape, consulte le fichier [`workflows-guide.md`](.github/workflows/workflows-guide.md).
+
+---
+
+## 🏷️ Labels de type / scope
+
+| Label       | Description                            |
+| ----------- | -------------------------------------- |
+| `frontend`  | Travail côté interface utilisateur     |
+| `UI design` | Conception UI (maquettes, prototypage) |
+| `backend`   | Logique serveur, APIs, traitement      |
+| `database`  | Modifications sur la base de données   |
+| `conf`      | Configuration (outils, env, etc.)      |
+| `ci/cd`     | Intégration continue, déploiement      |
+| `blocked`   | En attente de dépendance ou bloquant   |
 
 ---
 

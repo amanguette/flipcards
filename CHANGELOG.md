@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/amanguette/flipcards/compare/v1.1.0...v1.2.0) (2025-05-19)
+
+
+### Features
+
+* **github config:** add a user story template ([dfeeb1b](https://github.com/amanguette/flipcards/commit/dfeeb1bdb6ccef9acbb2a7922ed15991d93fb0d3))
+
 # [1.1.0](https://github.com/amanguette/flipcards/compare/v1.0.0...v1.1.0) (2025-05-14)
 
 

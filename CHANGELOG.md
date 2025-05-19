@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/amanguette/flipcards/compare/v1.4.3...v1.4.4) (2025-05-19)
+
+
+### Bug Fixes
+
+* **github conf:** edit user_story.yml to remove duplicated inputs which are native in github ([7272aa6](https://github.com/amanguette/flipcards/commit/7272aa694c3d38b036ffb6f86d5fd085e19bd073))
+
 ## [1.4.3](https://github.com/amanguette/flipcards/compare/v1.4.2...v1.4.3) (2025-05-19)
 
 

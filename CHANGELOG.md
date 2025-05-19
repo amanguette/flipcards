@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/amanguette/flipcards/compare/v1.2.0...v1.3.0) (2025-05-19)
+
+
+### Features
+
+* **github config:** add a config to ISSUE_TEMPLATE to prevent "open a blank issue" to be suggested ([2ff530b](https://github.com/amanguette/flipcards/commit/2ff530baf87b40e2e8cb209aca877219308382fb))
+
 # [1.2.0](https://github.com/amanguette/flipcards/compare/v1.1.0...v1.2.0) (2025-05-19)
 
 

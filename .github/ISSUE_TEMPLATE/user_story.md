@@ -1,36 +1,82 @@
----
 name: 🧩 User Story
-about: Créer une nouvelle User Story (fonctionnelle ou technique)
-title: '[US] '
+description: Create a new functional or technical user story
+title: "[US] "
 labels: []
 assignees: []
----
+body:
 
-## 🎯 Objectif
+- type: markdown
+  attributes:
+  value: | ## 🎯 Objective
+  What is the main goal of this user story?
 
-<!-- Quelle est l’intention principale de cette US ? -->
+- type: textarea
+  id: objective
+  attributes:
+  label: Objective
+  placeholder: Describe the purpose of this US...
+  validations:
+  required: true
 
-## 📝 Description
+- type: markdown
+  attributes:
+  value: | ## ✅ Acceptance Criteria
+  What must be true for this US to be considered complete?
 
-<!-- Décris ici le besoin fonctionnel ou technique. -->
+- type: checkboxes
+  id: acceptance
+  attributes:
+  label: Acceptance Criteria
+  options: - label: The user can... - label: The system displays... - label: Input is validated when... - label: A response is returned in...
 
-## ✅ Critères d’acceptation
+- type: markdown
+  attributes:
+  value: | ## ⏱ Time Estimates
+  Used for effort tracking and overtime alerts.
 
-- [ ] Exemple : L'utilisateur peut se connecter
-- [ ] Exemple : Le bouton renvoie vers la page X
+- type: input
+  id: estimation
+  attributes:
+  label: Estimated time (hours)
+  placeholder: e.g. 4
+  validations:
+  required: false
 
-## ⏱ Estimation (en heures)
+- type: input
+  id: time_spent
+  attributes:
+  label: Time spent (optional, can be updated later)
+  placeholder: e.g. 6
 
-<!-- Estimation initiale (sera utilisée pour détecter l'overtime) -->
+- type: markdown
+  attributes:
+  value: | ## 🚦 Priority
+  Choose the urgency level of this story.
 
-## 🚦 Priorité
+- type: dropdown
+  id: priority
+  attributes:
+  label: Priority
+  options: - low - medium - high - critical
 
-<!-- Renseigner la priorité (low, medium, high, critical) dans le champ GitHub Project dédié -->
+- type: markdown
+  attributes:
+  value: | ## 🌀 Sprint
+  Assign to an active sprint (can be updated in the project view).
 
-## 🌀 Sprint
+- type: input
+  id: sprint
+  attributes:
+  label: Sprint name
+  placeholder: e.g. Sprint 2024-W20
 
-<!-- Ce champ est géré dans le project GitHub via le champ "Sprint" -->
+- type: markdown
+  attributes:
+  value: | ## 🔗 Related Links / Context
+  Add any useful references (Epic, designs, technical doc, etc.)
 
-## 🔗 Liens / Éléments liés
-
-<!-- Lien vers Epic, docs techniques, maquettes, ou autre -->
+- type: textarea
+  id: links
+  attributes:
+  label: Context / Resources
+  placeholder: e.g. Related Epic #12, Figma link, etc.

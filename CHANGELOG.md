@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/amanguette/flipcards/compare/v1.4.2...v1.4.3) (2025-05-19)
+
+
+### Bug Fixes
+
+* **github config:** fix user_story.yml acceptance criteria (checkboxes are not editable in template) ([4481e3d](https://github.com/amanguette/flipcards/commit/4481e3dc0c5f3918b1ce00341d2396137e08b20b))
+
 ## [1.4.2](https://github.com/amanguette/flipcards/compare/v1.4.1...v1.4.2) (2025-05-19)
 
 

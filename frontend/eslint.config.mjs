@@ -5,8 +5,12 @@ import globals from 'globals';
 import baseConfig from '../eslint.base.mjs';
 
 export default [
+  {
+    ignores: ['eslint.config.mjs'],
+  },
   ...baseConfig,
   {
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       globals: {
         ...globals.browser,

@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/amanguette/flipcards/compare/v1.4.4...v1.5.0) (2025-05-27)
+
+
+### Features
+
+* **auth:** mise en place du système d'authentification avec Supabase ([c752fc1](https://github.com/amanguette/flipcards/commit/c752fc1584126c93e486e307b480bb8e898904be))
+
 ## [1.4.4](https://github.com/amanguette/flipcards/compare/v1.4.3...v1.4.4) (2025-05-19)
 
 

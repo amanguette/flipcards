@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# 🧭 Frontend – Supabase & Env Setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce document explique la gestion de la configuration côté client.
 
-Currently, two official plugins are available:
+## 📌 Contenu
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Variables d’environnement dans Vite](#variables-denvironnement-dans-vite)
+- [Configuration du client Supabase](#configuration-du-client-supabase)
+- [Référence](#référence)
 
-## Expanding the ESLint configuration
+## Variables d’environnement dans Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Les variables sont injectées au moment du build. Celles utilisées doivent être préfixées par `VITE_`.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+**Exemples :**
+
+```env
+VITE_SUPABASE_URL=https://xyzcompany.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOi...
+VITE_API_URL=http://localhost:3000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Configuration du client Supabase
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Le client est configuré dans `lib/supabaseClient.ts`. Pour garantir la sûreté des accès aux variables d’env, un utilitaire est défini dans `lib/getEnvVar.ts`.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+Ces deux fichiers sont typés avec TypeScript pour limiter les erreurs.
+
+## Référence
+
+📄 [`lib/env-and-supabase-setup.md`](./lib/env-and-supabase-setup.md)

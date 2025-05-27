@@ -82,8 +82,16 @@ PORT=3000
 
 **Info — frontend :**
 
-Actuellement, aucune variable d'environnement n'est nécessaire côté frontend.
-Si des erreurs de type apparaissent dans `vite.config.ts`, il est possible de les corriger en installant les types Node.js :
+Les détails concernant :
+
+- la gestion des variables d’environnement dans Vite,
+- la configuration du client Supabase,
+- les vérifications TS liées à l’environnement
+
+sont explicités ici :
+➡️ [`frontend/lib/env-and-supabase-setup.md`](./frontend/lib/env-and-supabase-setup.md)
+
+Par ailleurs, si des erreurs de type apparaissent dans `vite.config.ts`, il est possible de les corriger en installant les types Node.js :
 
 ```bash
 pnpm add -D @types/node
